@@ -1,0 +1,56 @@
+.base {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: relative;
+}
+
+.item {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    color: white;
+    background: aqua;
+    line-height: 30px;
+    user-select: none;
+}
+
+.item__selected {
+    background: #ff062b;
+}
+
+.item__last {
+    background: aquamarine;
+}
+
+.item__first {
+    background: aquamarine;
+}
+
+:root {
+    --selected-index: 5;
+}
+
+.highlight {
+    position: absolute;
+    left: calc(15px + var(--selected-index) * 50px);
+    top: 15px;
+
+    opacity: 0.5;
+    transition: 0.5s left;
+    width: 20px;
+    height: 20px;
+    background: crimson;
+}
+
+.highlight__disabled {
+    display: none;
+}
